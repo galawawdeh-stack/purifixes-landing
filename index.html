@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purifixes | AI-Powered Hospital Hygiene</title>
+    <title>Purifixes | AI-Powered Hospital Hygiene Ecosystem</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -13,71 +13,84 @@
     <div class="hero-wrapper">
         <div class="overlay"></div>
         <video autoplay muted loop id="heroVideo">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-medical-professional-working-in-a-laboratory-41165-large.mp4" type="video/mp4">
+            <source src="https://cdn.pixabay.com/video/2019/11/04/28742-372134440_large.mp4" type="video/mp4">
         </video>
 
-        <nav class="navbar">
+        <nav class="navbar animate__animated animate__fadeInDown">
             <div class="container flex-nav">
-                <div class="logo animate__animated animate__fadeInLeft">PURIFIXES<span>.com</span></div>
-                <div class="lang-switch">
-                    <button onclick="toggleLanguage()">English / العربية</button>
+                <div class="logo">PURIFIXES<span class="dot">.ai</span></div>
+                <div class="nav-controls">
+                    <button class="btn-lang" onclick="toggleLanguage()">EN / AR</button>
+                    <a href="#leads-form" class="btn-demo en">Request Demo</a>
+                    <a href="#leads-form" class="btn-demo ar">اطلب عرضاً</a>
                 </div>
             </div>
         </nav>
 
         <header class="hero-content container">
-            <h1 class="animate__animated animate__zoomIn">
-                <span class="en">Hygiene Intelligence for Modern Hospitals</span>
-                <span class="ar">ذكاء التنظيف و التطهير للمستشفيات الحديثة</span>
-            </h1>
-            <p class="animate__animated animate__fadeInUp animate__delay-1s">
-                <span class="en">Beyond Hygiene: We Predict Risks, Optimize Costs, and Save Lives.</span>
-                <span class="ar">أبعد من مجرد نظافة: نتنبأ بالمخاطر، نحسن التكاليف، وننقذ الأرواح.</span>
-            </p>
-            <div class="hero-btns animate__animated animate__fadeInUp animate__delay-1s">
-                <a href="#leads-form" class="btn-main">Request Demo / اطلب عرضاً</a>
+            <div class="hero-text animate__animated animate__fadeInUp">
+                <h1>
+                    <span class="en">Hygiene Intelligence for Modern Hospitals</span>
+                    <span class="ar">ذكاء النظافة و التطهير للمستشفيات الحديثة</span>
+                </h1>
+                <p>
+                    <span class="en">Prevent Infections. Optimize Costs. Save Lives. Empowered by RAG-AI.</span>
+                    <span class="ar">منع العدوى. تحسين التكاليف. إنقاذ الأرواح. مدعوم بالذكاء الاصطناعي RAG.</span>
+                </p>
+                <div class="hero-btns">
+                    <a href="#leads-form" class="btn-main en">Secure Your Facility Now</a>
+                    <a href="#leads-form" class="btn-main ar">أمّن منشأتك الآن</a>
+                </div>
+            </div>
+            <div class="hero-visual animate__animated animate__zoomIn animate__delay-1s">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/446261118123281.6081e8eb87664.gif" alt="AI Medical Analysis">
             </div>
         </header>
     </div>
 
-    <section class="stats container">
-        <div class="stat-item"><h3>-40%</h3><p>Infection Rates / معدل العدوى</p></div>
-        <div class="stat-item"><h3>+25%</h3><p>Efficiency / كفاءة التشغيل</p></div>
-        <div class="stat-item"><h3>100%</h3><p>Compliance / الامتثال للمعايير</p></div>
+    <section class="stats container animate__animated animate__fadeInUp">
+        <div class="stat-item"><h3>40%</h3><p>Lower Infection Rates / معدل عدوى أقل</p></div>
+        <div class="stat-item"><h3>25%</h3><p>Cost Optimization / تحسين التكاليف</p></div>
+        <div class="stat-item"><h3>100%</h3><p>HACCP Compliance / الامتثال للمعايير</p></div>
     </section>
 
     <section class="solutions container">
-        <h2 class="section-title">Solving Hospital Realities / حلول واقعية</h2>
+        <h2 class="section-title en">Revolutionizing Hospital Challenges</h2>
+        <h2 class="section-title ar">ثورة في حل تحديات المستشفيات</h2>
+        
         <div class="solution-grid">
-            <div class="sol-card">
-                <img src="https://img.icons8.com/clouds/100/000000/microscope.png" alt="Infection Control">
+            <div class="sol-card sol-problem animate__animated animate__fadeInLeft">
+                <div class="icon-3d">🚨</div>
                 <h3>Infection Clusters / بؤر العدوى</h3>
-                <p><b>Challenge:</b> Unexplained infection spikes in ICU.<br><b>Purifixes Result:</b> AI detected chemical resistance in the flooring material and suggested an alternative protocol that cleared the ward in 48 hours.</p>
+                <p><b>Challenge / التحدي:</b> Unexplained infection spikes in critical wards.<br>ارتفاع مفاجئ وغير مفسر في حالات العدوى بالأقسام الحرجة.</p>
             </div>
-            <div class="sol-card">
-                <img src="https://img.icons8.com/clouds/100/000000/money-box.png" alt="Cost Saving">
-                <h3>Chemical Waste / هدر المواد</h3>
-                <p><b>Challenge:</b> Hospital spending $1M annually on chemicals.<br><b>Purifixes Result:</b> Optimized dosing schedules saved $200k without compromising safety levels.</p>
+            <div class="sol-card sol-purifixes animate__animated animate__fadeInRight">
+                <div class="icon-3d">✨</div>
+                <h3>The Purifixes Result / النتيجة من بوريفيكسس</h3>
+                <p><b>Solution / الحل:</b> Our AI detected surface material contamination & recommended targeted, non-corrosive protocols.<br>اكتشف ذكاؤنا الاصطناعي تلوثاً في أسطح الأجهزة وأوصى ببروتوكولات دقيقة وغير مسببة للتآكل.</p>
             </div>
         </div>
     </section>
 
     <section id="leads-form" class="contact-section">
-        <div class="container form-box">
-            <h2>Join the Elite / انضم إلى النخبة</h2>
+        <div class="container form-box glass animate__animated animate__pulse">
+            <h2 class="en">Join the Future of Healthcare</h2>
+            <h2 class="ar">انضم إلى مستقبل الرعاية الصحية</h2>
+            
             <form action="https://formspree.io/f/YOUR_ID" method="POST">
                 <div class="input-group">
                     <input type="text" name="hospital" placeholder="Hospital Name / اسم المستشفى" required>
                     <input type="email" name="email" placeholder="Official Email / البريد الرسمي" required>
                 </div>
                 <textarea name="message" placeholder="Tell us your challenge / أخبرنا عن تحدياتكم"></textarea>
-                <button type="submit" class="btn-submit">Secure Your Facility Now / أمّن منشأتك الآن</button>
+                <button type="submit" class="btn-submit en">Secure Your Facility</button>
+                <button type="submit" class="btn-submit ar">أمّن منشأتك</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>Purifixes.com - Empowering Healthcare with Vibe Coding & AI</p>
+        <p>&copy; 2026 Purifixes.ai - Sterilization Intelligence Ecosystem</p>
     </footer>
 
     <script>
