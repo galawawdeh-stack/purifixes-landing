@@ -1,91 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <title>Purifixes – Healthcare Hygiene Intelligence</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purifexis | مستقبلك في تعقيم المستشفيات المدعوم بالذكاء الاصطناعي</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <div class="logo">Purifixes</div>
-  <button id="langToggle">AR</button>
-</header>
+    <nav>
+        <div class="container navbar">
+            <div class="logo">PURIFEXIS</div>
+            <a href="#leads-form" class="btn-nav">احجز استشارة مجانية</a>
+        </div>
+    </nav>
 
-<section class="hero" id="en">
-  <h1>Intelligent Hygiene Risk Assessment for Hospitals</h1>
-  <p>
-    Identify infection control gaps, disinfection risks, and compliance issues
-    using advanced medical hygiene intelligence.
-  </p>
-  <a href="#form" class="cta">Request Free Assessment</a>
-</section>
+    <header class="hero">
+        <div class="container">
+            <h1>حوّل مستشفاك إلى بيئة <span class="highlight">أكثر أماناً</span> بذكاء.</h1>
+            <p>نظام Purifexis هو استشاري التعقيم الرقمي الأول الذي يستخدم الذكاء الاصطناعي لتحليل مخاطر العدوى وتحسين كفاءة التنظيف بما يتوافق مع المعايير الدولية (WHO & JCI).</p>
+            <div class="hero-btns">
+                <a href="#leads-form" class="btn-primary">ابدأ تقييم المخاطر الآن</a>
+            </div>
+        </div>
+    </header>
 
-<section class="hero hidden" id="ar" dir="rtl">
-  <h1>منصة ذكية لتقييم مخاطر التعقيم في المستشفيات</h1>
-  <p>
-    تساعد Purifixes المستشفيات على اكتشاف مخاطر التعقيم
-    وثغرات مكافحة العدوى والامتثال للمعايير الطبية.
-  </p>
-  <a href="#form" class="cta">اطلب تقييمًا مجانيًا</a>
-</section>
+    <section class="value-prop">
+        <div class="container">
+            <h2>لماذا Purifexis هو الخيار الأول للمستشفيات؟</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon">🛡️</div>
+                    <h3>تقليل العدوى المكتسبة</h3>
+                    <p>تحليل فوري للبروتوكولات الحالية وتحديد الثغرات التي قد تسبب انتقال العدوى بين المرضى.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📊</div>
+                    <h3>تحسين الكفاءة التشغيلية</h3>
+                    <p>توفير ما يصل إلى 30% من استهلاك المواد الكيميائية من خلال جداول تعقيم ذكية ودقيقة.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📜</div>
+                    <h3>جاهزية تامة للتفتيش</h3>
+                    <p>تقارير فورية مطابقة لمعايير الجودة والاعتماد، جاهزة للتقديم في أي وقت.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="features">
-  <div>
-    <h3>Infection Control Focus</h3>
-    <p>Designed for hospitals and healthcare facilities.</p>
-  </div>
-  <div>
-    <h3>Compliance Ready</h3>
-    <p>Supports medical audits and accreditation programs.</p>
-  </div>
-  <div>
-    <h3>Actionable Reports</h3>
-    <p>Clear risk insights for infection control teams.</p>
-  </div>
-</section>
+    <section id="leads-form" class="cta-section">
+        <div class="container">
+            <div class="form-container">
+                <h2>انضم إلى رواد الرعاية الصحية</h2>
+                <p>اترك بياناتك وسيقوم أحد خبرائنا بالتواصل معك لتقديم تقرير أولي عن حالة التعقيم في منشأتك.</p>
+                <form action="submit.php" method="POST">
+                    <input type="text" name="hospital_name" placeholder="اسم المستشفى / المركز الطبي" required>
+                    <input type="text" name="name" placeholder="الاسم الكامل للمسؤول" required>
+                    <input type="email" name="email" placeholder="البريد الإلكتروني المؤسسي" required>
+                    <input type="tel" name="phone" placeholder="رقم التواصل" required>
+                    <select name="service_interest">
+                        <option value="risk_assessment">تقييم مخاطر التعقيم</option>
+                        <option value="cost_optimization">تحسين التكاليف</option>
+                        <option value="staff_training">تدريب الكوادر</option>
+                    </select>
+                    <button type="submit" class="btn-submit">أرسل الطلب الآن</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-<section class="how">
-  <h2>How It Works</h2>
-  <ol>
-    <li>Describe your hygiene & disinfection process</li>
-    <li>AI analyzes risks and deviations</li>
-    <li>Receive a professional medical hygiene report</li>
-  </ol>
-</section>
-
-<section id="form" class="form-section">
-  <h2>Request Free Assessment</h2>
-  <form method="POST" action="submit.php">
-    <input type="text" name="name" placeholder="Full Name / الاسم الكامل" required />
-    <input type="text" name="facility" placeholder="Hospital / Facility Name" required />
-    <input type="email" name="email" placeholder="Email Address" required />
-    <select name="role">
-      <option>Infection Control</option>
-      <option>Quality & Compliance</option>
-      <option>Operations</option>
-    </select>
-    <textarea name="message" placeholder="Optional message"></textarea>
-    <button type="submit">Submit</button>
-  </form>
-</section>
-
-<footer>
-  © 2026 Purifixes – Healthcare Hygiene Intelligence
-</footer>
-
-<script>
-  const toggle = document.getElementById("langToggle");
-  const en = document.getElementById("en");
-  const ar = document.getElementById("ar");
-
-  toggle.onclick = () => {
-    en.classList.toggle("hidden");
-    ar.classList.toggle("hidden");
-    toggle.textContent = toggle.textContent === "AR" ? "EN" : "AR";
-  };
-</script>
+    <footer>
+        <p>© 2026 Purifexis AI. جميع الحقوق محفوظة.</p>
+    </footer>
 
 </body>
 </html>
