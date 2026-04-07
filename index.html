@@ -3,100 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purifixes | استشاري التعقيم الذكي</title>
+    <title>Purifixes | منصة تدقيق وضبط العدوى الرقمية</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="bg-animation"></div>
+    <div class="bg-overlay"></div>
 
     <nav class="navbar">
         <div class="container flex-nav">
-            <div class="logo">PURIFIXES<span>.ai</span></div>
-            <div class="nav-links">
-                <button class="btn-lang" onclick="toggleLanguage()">EN / عربي</button>
-                <a href="#consultation" class="btn-demo">احجز استشارة مجانية</a>
+            <div class="logo">PURIFIXES<span class="ai">.ai</span></div>
+            <div class="security-tag">
+                <span class="icon">🔒</span> تشفير بيانات 256-بت (SSL)
             </div>
         </div>
     </nav>
 
-    <header class="hero container">
-        <div class="hero-content animate__animated animate__fadeIn">
-            <h1>تحويل تعقيم المستشفيات إلى <span class="highlight">علم دقيق</span></h1>
-            <p>نظام ذكاء اصطناعي يحلل بروتوكولات التنظيف، يقلل الهدر، ويضمن بيئة خالية من العدوى بنسبة 100%.</p>
-            <div class="hero-btns">
-                <a href="#consultation" class="btn-main">ابدأ التقييم المجاني الآن</a>
-            </div>
-        </div>
-        <div class="hero-image animate__animated animate__zoomIn">
-            <img src="https://cdn-icons-png.flaticon.com/512/3063/3063822.png" alt="AI Hygiene">
-        </div>
+    <header class="hero container text-center">
+        <h1 class="animate__animated animate__fadeInDown">التقييم الوطني لمعايير التعقيم والجودة</h1>
+        <p class="confidential-note">🛡️ معلوماتك تُعالج بسرية تامة وفق بروتوكولات حماية البيانات الصحية ولن يتم مشاركتها مع أي طرف ثالث.</p>
     </header>
 
-    <section id="consultation" class="consultation-page">
-        <div class="container">
-            <div class="form-card glass">
-                <div class="form-header">
-                    <h2>طلب استشارة تقييم عملية التنظيف</h2>
-                    <p>أدخل تفاصيل منشأتك للحصول على تقرير أولي مدعوم بالذكاء الاصطناعي</p>
-                </div>
+    <section class="audit-section container">
+        <div class="form-container glass animate__animated animate__fadeInUp">
+            
+            <div class="stepper">
+                <div class="step active" id="s1">1. التسجيل</div>
+                <div class="step" id="s2">2. معلومات المنشأة</div>
+                <div class="step" id="s3">3. بروتوكول التنظيف</div>
+                <div class="step" id="s4">4. الأهداف والملفات</div>
+            </div>
+
+            <form id="auditForm" action="https://formspree.io/f/YOUR_ID" method="POST" enctype="multipart/form-data">
                 
-                <form action="https://formspree.io/f/YOUR_ID" method="POST" class="cleaning-form">
-                    <div class="form-grid">
+                <div class="form-step active-step" id="step1">
+                    <h3>🔐 الخطوة الأولى: إنشاء حساب آمن</h3>
+                    <div class="grid">
                         <div class="input-group">
-                            <label>اسم المنشأة الطبية</label>
-                            <input type="text" name="hospital_name" placeholder="مثلاً: مستشفى الأمل التخصصي" required>
+                            <label>الاسم الكامل للمسؤول</label>
+                            <input type="text" name="admin_name" required>
                         </div>
                         <div class="input-group">
-                            <label>القسم المستهدف</label>
-                            <select name="department">
-                                <option value="icu">العناية المركزة (ICU)</option>
-                                <option value="surgery">غرف العمليات</option>
-                                <option value="wards">أقسام التنويم</option>
-                                <option value="lab">المختبرات</option>
+                            <label>البريد الإلكتروني المؤسسي</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label>كلمة المرور (للدخول للنتائج لاحقاً)</label>
+                            <input type="password" name="password" required>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-next" onclick="nextStep(2)">متابعة الاستبيان ←</button>
+                </div>
+
+                <div class="form-step" id="step2">
+                    <h3>🏥 الخطوة الثانية: تفاصيل المنشأة الصحية</h3>
+                    <div class="grid">
+                        <div class="input-group">
+                            <label>نوع المنشأة</label>
+                            <select name="facility_type" id="facilityType" onchange="toggleHospitalDetails()">
+                                <option value="hospital">مستشفى</option>
+                                <option value="clinic">مجمع عيادات</option>
+                                <option value="dental">مركز أسنان</option>
+                                <option value="lab">مختبر طبي</option>
+                                <option value="physio">مركز علاج طبيعي</option>
+                                <option value="imaging">مركز تصوير إشعاعي</option>
+                            </select>
+                        </div>
+                        
+                        <div id="hospitalOnly" class="full-width grid-sub">
+                            <div class="input-group">
+                                <label>عدد الأسرة</label>
+                                <input type="number" name="beds_count">
+                            </div>
+                            <div class="input-group">
+                                <label>الأقسام المتاحة (مثلاً: ICU, طوارئ)</label>
+                                <input type="text" name="departments">
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label>الاعتمادية الحالية</label>
+                            <select name="accreditation" onchange="toggleOtherAcc(this)">
+                                <option value="JCI">JCI (الدولية)</option>
+                                <option value="HCAC">HCAC (الأردنية)</option>
+                                <option value="CBAHI">CBAHI (السعودية)</option>
+                                <option value="none">لا يوجد</option>
+                                <option value="other">أخرى...</option>
+                            </select>
+                        </div>
+                        <div id="otherAccInput" class="input-group" style="display:none;">
+                            <label>حدد الاعتمادية الأخرى</label>
+                            <input type="text" name="accreditation_other">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label>إدارة التنظيف تتم عبر:</label>
+                            <select name="staff_type">
+                                <option value="internal">كادر داخلي (In-house)</option>
+                                <option value="outsourced">شركة تعقيم خارجية</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex-btns">
+                        <button type="button" class="btn-back" onclick="prevStep(1)">السابق</button>
+                        <button type="button" class="btn-next" onclick="nextStep(3)">المتابعة للبروتوكول</button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step3">
+                    <h3>🧪 الخطوة الثالثة: بروتوكولات التنظيف والتعقيم</h3>
+                    <div class="grid">
+                        <div class="input-group full-width">
+                            <label>القسم / السطح المستهدف بالتحليل</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="surface[]" value="floors"> أرضيات</label>
+                                <label><input type="checkbox" name="surface[]" value="medical_devices"> أجهزة طبية</label>
+                                <label><input type="checkbox" name="surface[]" value="furniture"> أثاث ومقابض</label>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label>البروتوكول المتبع</label>
+                            <select name="protocol_method">
+                                <option value="spray_wipe">رش ومسح (Spray & Wipe)</option>
+                                <option value="wipe_only">مسح فقط (Wipe Only)</option>
+                                <option value="rinse">شطف وتجفيف</option>
                             </select>
                         </div>
 
                         <div class="input-group">
-                            <label>المادة الكيميائية الحالية</label>
-                            <input type="text" name="chemical_used" placeholder="مثلاً: الكلور، كواترنري..." required>
+                            <label>اسم المادة الكيميائية والشركة الصانعة</label>
+                            <input type="text" name="chemical_brand" placeholder="مثال: Virex II 256 - Diversey">
                         </div>
+
                         <div class="input-group">
-                            <label>معدل التكرار يومياً</label>
-                            <input type="number" name="frequency" placeholder="كم مرة يتم التنظيف؟">
+                            <label>نسبة التركيز (للمواد المركزة)</label>
+                            <input type="text" name="concentration" placeholder="مثال: 1:256">
+                        </div>
+
+                        <div class="input-group">
+                            <label>هل يوجد (SOP) دليل إجرائي معتمد؟</label>
+                            <select name="has_sop">
+                                <option value="detailed">نعم، دليل تفصيلي لكل قسم</option>
+                                <option value="general">بروتوكول عام للمنشأة</option>
+                                <option value="no">لا يوجد حالياً</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex-btns">
+                        <button type="button" class="btn-back" onclick="prevStep(2)">السابق</button>
+                        <button type="button" class="btn-next" onclick="nextStep(4)">الخطوة النهائية</button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step4">
+                    <h3>🎯 الخطوة الرابعة: الأهداف والتوثيق</h3>
+                    <div class="grid">
+                        <div class="input-group full-width">
+                            <label>ارفع نسخة من (SOP) أو صور للنشرات الفنية للمواد (SDS) - اختياري</label>
+                            <input type="file" name="attachment" multiple>
                         </div>
 
                         <div class="input-group full-width">
-                            <label>أكبر تحدي تواجهه حالياً؟</label>
-                            <textarea name="challenge" placeholder="مثلاً: مقاومة البكتيريا، تكاليف عالية، صعوبة في تدريب الطاقم..."></textarea>
+                            <label>ما هو التحدي الأكبر حالياً من وجهة نظرك؟</label>
+                            <textarea name="main_challenge" placeholder="مثلاً: بكتيريا مقاومة، روائح كيميائية، تلف الأجهزة..."></textarea>
                         </div>
 
                         <div class="input-group">
-                            <label>البريد الإلكتروني للمسؤول</label>
-                            <input type="email" name="email" placeholder="email@hospital.com" required>
-                        </div>
-                        <div class="input-group">
-                            <label>رقم التواصل المباشر</label>
-                            <input type="tel" name="phone" placeholder="+966..." required>
+                            <label>هدف المنشأة من هذا التقييم:</label>
+                            <select name="goal">
+                                <option value="compliance">المطابقة مع المعايير (Compliance)</option>
+                                <option value="improvement">تحسين الأداء وتقليل التكاليف (Improvement)</option>
+                            </select>
                         </div>
                     </div>
-                    
-                    <button type="submit" class="btn-submit-form">إرسال البيانات للتحليل الفوري</button>
-                </form>
-            </div>
+                    <div class="flex-btns">
+                        <button type="button" class="btn-back" onclick="prevStep(3)">السابق</button>
+                        <button type="submit" class="btn-submit">إرسال التقرير للمراجعة الفورية 🚀</button>
+                    </div>
+                </div>
+
+            </form>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Purifixes.ai | منصة ذكاء التعقيم للمستشفيات</p>
+        <p>جميع الحقوق محفوظة لـ Purifixes.ai © 2026 | نظام مشفر وآمن</p>
     </footer>
 
     <script>
-        function toggleLanguage() {
-            document.body.classList.toggle('en-mode');
-            // هنا يمكن إضافة منطق تغيير النصوص برمجياً
+        function nextStep(step) {
+            document.querySelectorAll('.form-step').forEach(el => el.classList.remove('active-step'));
+            document.getElementById('step' + step).classList.add('active-step');
+            
+            document.querySelectorAll('.step').forEach(el => el.classList.remove('active'));
+            document.getElementById('s' + step).classList.add('active');
+        }
+
+        function prevStep(step) {
+            nextStep(step);
+        }
+
+        function toggleHospitalDetails() {
+            const type = document.getElementById('facilityType').value;
+            document.getElementById('hospitalOnly').style.display = (type === 'hospital') ? 'grid' : 'none';
+        }
+
+        function toggleOtherAcc(select) {
+            document.getElementById('otherAccInput').style.display = (select.value === 'other') ? 'block' : 'none';
         }
     </script>
 </body>
