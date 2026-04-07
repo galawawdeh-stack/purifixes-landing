@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Purifixes – Healthcare Hygiene Intelligence</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Purifixes</div>
+  <button id="langToggle">AR</button>
+</header>
+
+<section class="hero" id="en">
+  <h1>Intelligent Hygiene Risk Assessment for Hospitals</h1>
+  <p>
+    Identify infection control gaps, disinfection risks, and compliance issues
+    using advanced medical hygiene intelligence.
+  </p>
+  <a href="#form" class="cta">Request Free Assessment</a>
+</section>
+
+<section class="hero hidden" id="ar" dir="rtl">
+  <h1>منصة ذكية لتقييم مخاطر التعقيم في المستشفيات</h1>
+  <p>
+    تساعد Purifixes المستشفيات على اكتشاف مخاطر التعقيم
+    وثغرات مكافحة العدوى والامتثال للمعايير الطبية.
+  </p>
+  <a href="#form" class="cta">اطلب تقييمًا مجانيًا</a>
+</section>
+
+<section class="features">
+  <div>
+    <h3>Infection Control Focus</h3>
+    <p>Designed for hospitals and healthcare facilities.</p>
+  </div>
+  <div>
+    <h3>Compliance Ready</h3>
+    <p>Supports medical audits and accreditation programs.</p>
+  </div>
+  <div>
+    <h3>Actionable Reports</h3>
+    <p>Clear risk insights for infection control teams.</p>
+  </div>
+</section>
+
+<section class="how">
+  <h2>How It Works</h2>
+  <ol>
+    <li>Describe your hygiene & disinfection process</li>
+    <li>AI analyzes risks and deviations</li>
+    <li>Receive a professional medical hygiene report</li>
+  </ol>
+</section>
+
+<section id="form" class="form-section">
+  <h2>Request Free Assessment</h2>
+  <form method="POST" action="submit.php">
+    <input type="text" name="name" placeholder="Full Name / الاسم الكامل" required />
+    <input type="text" name="facility" placeholder="Hospital / Facility Name" required />
+    <input type="email" name="email" placeholder="Email Address" required />
+    <select name="role">
+      <option>Infection Control</option>
+      <option>Quality & Compliance</option>
+      <option>Operations</option>
+    </select>
+    <textarea name="message" placeholder="Optional message"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Purifixes – Healthcare Hygiene Intelligence
+</footer>
+
+<script>
+  const toggle = document.getElementById("langToggle");
+  const en = document.getElementById("en");
+  const ar = document.getElementById("ar");
+
+  toggle.onclick = () => {
+    en.classList.toggle("hidden");
+    ar.classList.toggle("hidden");
+    toggle.textContent = toggle.textContent === "AR" ? "EN" : "AR";
+  };
+</script>
+
+</body>
+</html>
