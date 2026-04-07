@@ -3,76 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purifexis | مستقبلك في تعقيم المستشفيات المدعوم بالذكاء الاصطناعي</title>
+    <title>Purifixes | AI-Powered Hospital Hygiene</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav>
-        <div class="container navbar">
-            <div class="logo">PURIFEXIS</div>
-            <a href="#leads-form" class="btn-nav">احجز استشارة مجانية</a>
-        </div>
-    </nav>
+    <div class="hero-wrapper">
+        <div class="overlay"></div>
+        <video autoplay muted loop id="heroVideo">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-medical-professional-working-in-a-laboratory-41165-large.mp4" type="video/mp4">
+        </video>
 
-    <header class="hero">
-        <div class="container">
-            <h1>حوّل مستشفاك إلى بيئة <span class="highlight">أكثر أماناً</span> بذكاء.</h1>
-            <p>نظام Purifexis هو استشاري التعقيم الرقمي الأول الذي يستخدم الذكاء الاصطناعي لتحليل مخاطر العدوى وتحسين كفاءة التنظيف بما يتوافق مع المعايير الدولية (WHO & JCI).</p>
-            <div class="hero-btns">
-                <a href="#leads-form" class="btn-primary">ابدأ تقييم المخاطر الآن</a>
+        <nav class="navbar">
+            <div class="container flex-nav">
+                <div class="logo animate__animated animate__fadeInLeft">PURIFIXES<span>.ai</span></div>
+                <div class="lang-switch">
+                    <button onclick="toggleLanguage()">English / العربية</button>
+                </div>
             </div>
-        </div>
-    </header>
+        </nav>
 
-    <section class="value-prop">
-        <div class="container">
-            <h2>لماذا Purifexis هو الخيار الأول للمستشفيات؟</h2>
-            <div class="grid">
-                <div class="card">
-                    <div class="icon">🛡️</div>
-                    <h3>تقليل العدوى المكتسبة</h3>
-                    <p>تحليل فوري للبروتوكولات الحالية وتحديد الثغرات التي قد تسبب انتقال العدوى بين المرضى.</p>
-                </div>
-                <div class="card">
-                    <div class="icon">📊</div>
-                    <h3>تحسين الكفاءة التشغيلية</h3>
-                    <p>توفير ما يصل إلى 30% من استهلاك المواد الكيميائية من خلال جداول تعقيم ذكية ودقيقة.</p>
-                </div>
-                <div class="card">
-                    <div class="icon">📜</div>
-                    <h3>جاهزية تامة للتفتيش</h3>
-                    <p>تقارير فورية مطابقة لمعايير الجودة والاعتماد، جاهزة للتقديم في أي وقت.</p>
-                </div>
+        <header class="hero-content container">
+            <h1 class="animate__animated animate__zoomIn">
+                <span class="en">Sterilization Intelligence for Modern Hospitals</span>
+                <span class="ar">ذكاء التعقيم للمستشفيات الحديثة</span>
+            </h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s">
+                <span class="en">Beyond Cleaning: We Predict Risks, Optimize Costs, and Save Lives.</span>
+                <span class="ar">أبعد من مجرد تنظيف: نتنبأ بالمخاطر، نحسن التكاليف، وننقذ الأرواح.</span>
+            </p>
+            <div class="hero-btns animate__animated animate__fadeInUp animate__delay-1s">
+                <a href="#leads-form" class="btn-main">Request Demo / اطلب عرضاً</a>
+            </div>
+        </header>
+    </div>
+
+    <section class="stats container">
+        <div class="stat-item"><h3>-40%</h3><p>Infection Rates / معدل العدوى</p></div>
+        <div class="stat-item"><h3>+25%</h3><p>Efficiency / كفاءة التشغيل</p></div>
+        <div class="stat-item"><h3>100%</h3><p>Compliance / الامتثال للمعايير</p></div>
+    </section>
+
+    <section class="solutions container">
+        <h2 class="section-title">Solving Hospital Realities / حلول واقعية</h2>
+        <div class="solution-grid">
+            <div class="sol-card">
+                <img src="https://img.icons8.com/clouds/100/000000/microscope.png" alt="Infection Control">
+                <h3>Infection Clusters / بؤر العدوى</h3>
+                <p><b>Challenge:</b> Unexplained infection spikes in ICU.<br><b>Purifixes Result:</b> AI detected chemical resistance in the flooring material and suggested an alternative protocol that cleared the ward in 48 hours.</p>
+            </div>
+            <div class="sol-card">
+                <img src="https://img.icons8.com/clouds/100/000000/money-box.png" alt="Cost Saving">
+                <h3>Chemical Waste / هدر المواد</h3>
+                <p><b>Challenge:</b> Hospital spending $1M annually on chemicals.<br><b>Purifixes Result:</b> Optimized dosing schedules saved $200k without compromising safety levels.</p>
             </div>
         </div>
     </section>
 
-    <section id="leads-form" class="cta-section">
-        <div class="container">
-            <div class="form-container">
-                <h2>انضم إلى رواد الرعاية الصحية</h2>
-                <p>اترك بياناتك وسيقوم أحد خبرائنا بالتواصل معك لتقديم تقرير أولي عن حالة التعقيم في منشأتك.</p>
-                <form action="submit.php" method="POST">
-                    <input type="text" name="hospital_name" placeholder="اسم المستشفى / المركز الطبي" required>
-                    <input type="text" name="name" placeholder="الاسم الكامل للمسؤول" required>
-                    <input type="email" name="email" placeholder="البريد الإلكتروني المؤسسي" required>
-                    <input type="tel" name="phone" placeholder="رقم التواصل" required>
-                    <select name="service_interest">
-                        <option value="risk_assessment">تقييم مخاطر التعقيم</option>
-                        <option value="cost_optimization">تحسين التكاليف</option>
-                        <option value="staff_training">تدريب الكوادر</option>
-                    </select>
-                    <button type="submit" class="btn-submit">أرسل الطلب الآن</button>
-                </form>
-            </div>
+    <section id="leads-form" class="contact-section">
+        <div class="container form-box">
+            <h2>Join the Elite / انضم إلى النخبة</h2>
+            <form action="https://formspree.io/f/YOUR_ID" method="POST">
+                <div class="input-group">
+                    <input type="text" name="hospital" placeholder="Hospital Name / اسم المستشفى" required>
+                    <input type="email" name="email" placeholder="Official Email / البريد الرسمي" required>
+                </div>
+                <textarea name="message" placeholder="Tell us your challenge / أخبرنا عن تحدياتكم"></textarea>
+                <button type="submit" class="btn-submit">Secure Your Facility Now / أمّن منشأتك الآن</button>
+            </form>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Purifexis AI. جميع الحقوق محفوظة.</p>
+        <p>Purifixes.ai - Empowering Healthcare with Vibe Coding & AI</p>
     </footer>
 
+    <script>
+        function toggleLanguage() {
+            document.body.classList.toggle('en-mode');
+        }
+    </script>
 </body>
 </html>
